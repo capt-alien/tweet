@@ -1,0 +1,57 @@
+Blockchain and Climate Solutions
+
+Introduction:
+Climate Change is the single largest challenge we have ever faced as a species. Rapid industrialization and our reliance on fossil fuels have drastically altered the chemistry of our atmosphere, leading to severe and ever more unpredictable weather patterns. If left unchecked, climate change will lead to a cascading effect of serious problems that pose a grave threat to humanity. However, technological solutions are being implemented at all levels. California and large parts of the world are drastically increasing their capacities for renewable energy, energy grids are using smart-grid technology to become more efficient, and less reliant on fossil fuels. Regenerative agricultural techniques are pulling carbon out of the atmosphere and producing viable products. This blog will focus on how blockchain technology will help fight global climate change.
+
+Solutions:
+There is no silver bullet for the climate challenge that we face. The problem is enormous and deeply intertwined with our economic system, and there are many sources of greenhouse gasses(GHG). The only true solution is to reduce greenhouse gas in the atmosphere. There are two ways to do this: 1) reduce the amount of GHG released into the atmosphere. 2) Take GHG out of the atmosphere. Blockchain can be applied to both approaches.
+
+There are many technological solutions that prevent carbon from entering the atmosphere. Most notably Small-scale home solar energy installations are greatly increasing solar energy capacity in California. This solar energy boom is a result of state and federal policy as well as technological advances in solar energy that makes solar energy in California cheaper than conventional energy. However, the major problem with solar energy is that installations only produce energy during the day when the sun is shining and the sun does not always shine when electricity is used. To solve this problem utility companies use smart grid technology to bill the customers by the net energy is produced and consumed by building. This is known as net energy metering (NEM), and is like a battery to the customer, except instead of using chemicals to store energy, the system uses the money, and credits accounts for energy put into the grid.
+
+Regenerative Agriculture uses farming to pull carbon from the air and put it into the ground. The goal of regenerative agriculture is to fight climate change and habitat loss by increasing biomass and biodiversity(regenerationinternational.org). Regenerative Agriculture is promoted financially through certifications such as USDA Organic, Fair Trade and a handful of others, which offer the end consumer the ability to chose sustainably sourced products at a premium. Then that premium is paid to the producers to encourage sustainable practices. The issue with this is tracking the product from the shelves to the producer, especially when those producers are located on a different continent. Verifying such supply chains is a labor-intensive process that can involve dozens of independently verified bank transactions.
+
+Blockchain technology holds the potential for solving some of the problems facing the implementation of these carbon-cutting technologies. In the case of NEM, the small-scale solar providers are paid the wholesale rate for the energy provided and then buy at the market rate from the utility companies (for energy used in excess of production or when the sun is not out). Through smart contracts and blockchain, energy producers could sell energy directly to the user as the energy is used(gridworks). Blockchain verifies that transactions have taken place in a tamperproof way, allowing supply chains to be more transparent. Such automation makes tracking sustainable supply chains much less labor intensive, bringing the costs of supply chain verification down. By making these certifications more affordable, more farmers could opt in and would have more incentive to use sustainable farming technics.
+
+PEST Analysis:
+ In order to understand these issues, I conducted a PEST analysis to take a deeper look at the environment surrounding the subject.
+
+Political:
+The state of California is making huge strides in fighting climate change. Today the state passed AB100 into law setting more aggressive renewable energy goals, requiring that 100% of the state’s electricity from renewable sources by 2045. The state will achieve its goals by aggressively funding renewable energy sources such as wind, solar and geothermal throughout the state. No doubt, using smart contracts to restructure the payment system of a utility network would require regulatory input in a heavily regulated utility industry. Such regulation would need input from grid operators such as PG&E, which employ over 20,000 people.
+
+Economic:
+Blockchain by nature will bring widespread change to the economic system. First and foremost, it has the potential to increase the speed of monetary transactions, and therefore grow the economy. IBM predicts that Blockchain has the potential to grow GDP by 5% and trade volume by 15%(RQ, 2017).
+
+Social:
+Blockchain has the potential for many positive social impacts. By creating more transparent supply chains, companies can have better accountability into their supply chain. This is one reason why WalMart is investing in blockchain technology. Walmart faced a public outcry after a fire killed 112 people in a garment factory producing goods for Walmart in Bangladesh. Conditions at the factory were deplorable, and the doors were locked to prevent workers from getting outside. Due to the nature of global supply chains, Walmart couldn’t have known about conditions in that particular factory until its brands were found at the scene of the fire. Through blockchain, Walmart will be able to look into its supply chain for such condition and leverage their contracts to prevent such deplorable conditions for workers.
+
+Technological:
+The technology to address climate change is currently in existence. Renewable energy technology has matured and is only getting cheaper as newer more effective manufacturing technics become available. There are many technological solutions to climate change coming to age and being implemented. Implementation of blockchain would pave the way for greater deployment of these technologies.
+
+Blockchain technology itself is not that exciting, but it will pave the way for more interesting technologies, such as smart contracts that self-actualize once certain criteria are met.
+
+User interviews and Questions:
+In order to learn better how this technology could be used to assist business solutions to climate change, I interviewed Rebecca Hamelton, the owner/CEO of the WS Badger company, producer of sustainable personal care products. Badger is a certified B Corp, meaning that it has a commitment to social and environmental stewardship.
+
+1) What are your pain points for managing your supply chain?
+
+Having complete transparency to be able to track where our supplies are coming from and what sort of social and environmental programs are in use.
+
+2) How would your business be affected by the ability to accurately track financial exchanges in real-time?
+
+This will lead to Increase transparency and the ability to track where a supply is at any given point.
+
+3) What are you most excited about with blockchain?
+
+Opportunity to be able to measure social or environmental metrics of the supply chain with information that is open and shared.
+
+Industry Contact:
+ My industry contact is Steve Sellers who has worked as a top-level consultant and the interim COO for Fairtrade USA, the largest FairTrade certifying organization in the US. Steve explained to me that the blockchain technology is new, as is with all new technologies, many applications are being developed for it, but not all of those applications are the best use for the technology. Blockchain technology itself is not that exciting, but it will pave the way for more interesting technologies, such as smart contracts that self-actualize once certain criteria are met. So instead of billing for services rendered, a smart contract could automatically pay a contractor once work is complete. For example, an agricultural producer could automatically receive payment when their crops are shipped, which would take some pressure off of cash-strapped farmers who produce goods and pay workers.
+
+
+Application for Blockchain:
+Blockchain technology is in its infancy. The technology only recently came into existence around 2015 in use cryptocurrencies such as BitCoin and Etherium transactions. However, Blockchain is not in itself a solution to problems, but rather something that enables solutions to be implemented. The blockchain is like the road that enables more technologically advanced cars and trucks to drive on it(Satell, 2018). Implementation of blockchain is like building a road to address the needs of a surrounding area. There is no one magic software solution that will address all the needs of every single business or entity. Therefore, any blockchain application should be tailored to the needs of the users, and what they are using the blockchain for.
+
+My app would follow this framework, of being centralized around a core product while creating highly customizable solutions to the needs of the business client. The core product would be able to be updated and maintained like any other software and then customized based on the needs of the client. For example, a company which uses global agricultural products could use the core product to track their supply, and then have suppliers on the other end, use a scaled-down mobile app to make and accept payments using blockchain. This data would be accessible by the manufacturer on the top of the supply chain in order to verify ethical use of those payments.
+
+Conclusion:
+Blockchain will far-reaching impacts when the technology sees the greater adaptation. Due to its ability to easily and accurately track payments, it will help companies monitor supply chains to ensure the use of sustainable practices. Blockchain in itself is not very interesting but will pave the road for more impactful technologies. This impact will be from the way we do business and the way will be able to track verified transactions. Open Ledger technology and smart contracts are two of the capabilities that blockchain will provide. Such solutions would need to be tailored to the customers’ needs instead of one overarching solution. In short, blockchain allows for new business capabilities that will be able to promote renewable energy and sustainable agriculture, which will, in turn, reduce GHG in the atmosphere, and fight global climate change.
