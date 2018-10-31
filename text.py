@@ -1,9 +1,16 @@
-# 1) Open files
-file = open("blog.txt", "r")
-file_list = file.split(" ")
-print(file_list)
 
-# 2) Break file into a list
-# 3) Output list into a histogram
-# 4) Rearage histogram from most used to least used
-# 5) Output into an analyitics file.
+from collections import Counter
+import sys
+
+def histogram(string):
+    words1 = string.lower()
+    words = words1.split()
+    count = Counter()
+    for word in words:
+        count[word] += 1
+    return count
+
+filename = sys.argv[1]
+words = open(sys.argv[1], "r").read()
+hist = histogram(words)
+print(hist)
