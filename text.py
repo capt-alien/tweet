@@ -11,7 +11,7 @@ def histogram(string):
     return count
 
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     filename = sys.argv[1]
     words = open(sys.argv[1], "r").read()
     hist = histogram(words)

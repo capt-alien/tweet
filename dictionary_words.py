@@ -21,9 +21,13 @@ if __name__ == '__main__':
     i = 0
     number = int(argv[1])
     loaded_words = load_words()
-    while i < number:
+    # while i < number:
+    #     print(random_word(loaded_words))
+    #     i += 1
+    for i in range(0, number):
         print(random_word(loaded_words))
-        i += 1
+
+
 
 
 
