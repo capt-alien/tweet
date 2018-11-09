@@ -11,34 +11,44 @@ def sum_value(hist):
     dict_total = (sum(hist.values()))
     return dict_total
 
-# created weighted probabliltiy function
+# takes a histogram and returns a weighted probabibility
 def weighted_random(hist, total):
-    dict_total = (sum(hist.values()))
-    """
-    Takes a histogram and returns a weighted random choice from it
-    """
     destination = random.randint(0, total)
     for word in hist:
         destination = destination - hist[word]
         if destination < 0:
             return word
 
+#takes a histogram and retuns % of each word
+def hist_p(hist):
+    total = 0
+    for i in hist:
+        total = total + hist[i]
+    for j in hist:
+        hist[j] = (float)(hist[j])/total
+    return hist
+
 
 if __name__ == '__main__':
     file1 = argv[1]  #file to analyze
     looper = int(argv[2]) # number of times that loop will run
+
     #processing words and defineing objects
     words = text_list(file1)
     hist1 = dict_words(words)
-    total = sum_value(words)
+    hist2 = hist1
+    print(hist1)
+    total = sum_value(hist1)
+    print(hist1)
+    # print(analysis1)
+
     #run loop for input values
     sentance = []
     for i in range(0,looper):
         rand_word = weighted_random(hist1, total)
         sentance.append(rand_word)
 
+    #print Results
     print(sentance)
-
-
-
-        sys.exit()
+    sentance_hist = dict_words(sentance)
+    print(sentance_hist)
