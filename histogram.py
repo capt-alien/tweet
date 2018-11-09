@@ -1,12 +1,15 @@
 ##Code based on Dylan Flyn's code. I made some improvments
 
 from sys import argv
+import re
 import random
 
 
 ##open text file and turn it into a usable words_list
 def text_list(file_name):
-    split_words_list = open(file_name, 'r').read().lower().split()
+    #Opens file
+    raw_words = open(file_name, 'r').read().lower().split()
+#should be able to filter out punctuations and special charictors.
     return split_words_list
 
 ##Create a list of unique words
@@ -54,10 +57,14 @@ def tuple(words):
 if __name__ == '__main__':
     file1 = argv[1]
     print_list = text_list(file1)
+    print(print_list)
     #promts user for method
-    print("1 for a Dictionary")
-    print("2 for a List of Lists")
-    print("3 for a Tuple")
+    print("==================================")
+    print("Welcome to Hist-o-grama-rama!!!!!")
+    print("=======>INSTRUCTIONS<============")
+    print("Press 1 for a Dictionary")
+    print("Press 2 for a List of Lists")
+    print("Press 3 for a Tuple")
     input1 = input("Which method would you like returned? ")
     #dictionary
     if input1 == "1":
