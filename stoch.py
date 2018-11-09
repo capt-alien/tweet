@@ -27,7 +27,7 @@ def weighted_probablity(weighted_histogram):
 
 
 
-if __name__ in '__main__':
+if __name__ == '__main__':
     histogram = ["there", "once", "was", "a", "man", "from", "nantucket"]
     weighted_histogram = [["there", 0.1], ["once", 0.2], ["was", 0.1], ["a", 0.1], ["man", 0.1], ["from", 0.1], ["nantucket", 0.3]]
     # print("Your random histogram word is:\n{}".format(random_word(histogram)))
