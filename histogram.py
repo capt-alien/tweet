@@ -1,4 +1,4 @@
-##Code based on Dylan Flyn's code. I made some improvments
+##Code borrows from Dylan Flyn's code. I made improvments
 
 from sys import argv
 import re
@@ -10,7 +10,7 @@ def text_list(file_name):
     #Opens file
     raw_words = open(file_name, 'r').read().lower().split()
 #should be able to filter out punctuations and special charictors.
-    return split_words_list
+    return raw_words
 
 ##Create a list of unique words
 
@@ -51,6 +51,11 @@ def tuple(words):
             tuple_list.append((word, words.count(word)))
     return tuple_list
 
+#sums dictionary in histo
+def sum_value(histogram):
+    total = (sum(histogram.values()))
+    return total
+
 
 #opens file_name
 
@@ -69,7 +74,9 @@ if __name__ == '__main__':
     #dictionary
     if input1 == "1":
         dict_list = dict_words(print_list)
+        tots = sum_value(dict_list)
         print(dict_list)
+        print(tots)
     #list of list
     elif input1 == "2":
         wlist = list_words(print_list)
