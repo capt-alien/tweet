@@ -8,7 +8,7 @@ def sentance(histogram, total, loop):
     looper = int(loop)
     sentance1= []
     # loop
-    for i in range(0,looper):
+    for i in range(0, looper):
         weight_word = weight_prob.weighted_random(hgram, total)
         sentance1.append(weight_word)
     return sentance1

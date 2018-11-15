@@ -8,7 +8,7 @@ def sentance(histogram, total, loop):
     sentance1= []
     # loop
     for i in range(0,looper):
-        weight_word = weight_prob.weighted_random(hgram, total)
+        weight_word = weight_prob.weighted_random(histogram, total)
         sentance1.append(weight_word)
     return sentance1
 
@@ -21,12 +21,11 @@ app = Flask(__name__)
 def result():
     #process and import file
     hgram = weight_prob.dict_words(weight_prob.text_list('test.txt'))
-    total= weight_prob.sum_value(hgram)
+    total = weight_prob.sum_value(hgram)
     loop = 15
-
-    #create resulting object
     result = sentance(hgram, total, loop)
-    return result
+    #create resulting object
+    return str(result)
 
 @app.route('/tuna')
 def tuna():
