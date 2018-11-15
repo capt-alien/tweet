@@ -16,17 +16,18 @@ def weighted_random(hist, total):
     destination = random.randint(0, total)
     for word in hist:
         destination = destination - hist[word]
-        if destination < 0:
+        if destination <= 0:
             return word
 
-#takes a histogram and retuns % of each word
+#takes a histogram and retuns % of each word Needs to tweek to spit out new dictionary
 def hist_p(hist):
     total = 0
     for i in hist:
         total = total + hist[i]
     for j in hist:
         hist[j] = (float)(hist[j])/total
-    return hist
+        hist2 = hist
+    return hist2
 
 
 if __name__ == '__main__':
@@ -36,7 +37,6 @@ if __name__ == '__main__':
     #processing words and defineing objects
     words = text_list(file1)
     hist1 = dict_words(words)
-    hist2 = hist1
     print(hist1)
     total = sum_value(hist1)
     print(hist1)
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         rand_word = weighted_random(hist1, total)
         sentance.append(rand_word)
 
-    #print Results
+    #print Results and convert to new histogram for testing
     print(sentance)
     sentance_hist = dict_words(sentance)
     print(sentance_hist)

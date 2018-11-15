@@ -56,6 +56,13 @@ def sum_value(histogram):
     total = (sum(histogram.values()))
     return total
 
+def write_file(object, type):
+    fname = input("Please enter name for file: ")
+    with open(fname, "w") as file:
+        file.write(type)
+        file.write(str(object))
+        file.close()
+
 
 #opens file_name
 
@@ -77,13 +84,28 @@ if __name__ == '__main__':
         tots = sum_value(dict_list)
         print(dict_list)
         print(tots)
+        #saves result to text file
+        answer1 = input("Would you like to save to a file? y/n").lower()
+        if answer1 == "y":
+            write_file(dict_list, "Dictionary")
+
+
     #list of list
     elif input1 == "2":
         wlist = list_words(print_list)
         print(wlist)
+        answer2 = input("Would you like to save to a file? y/n").lower()
+        if answer2 == "y":
+            write_file(wlist, "List of lists")
+
     #Tuple
     elif input1 == "3":
         tlist = tuple(print_list)
         print(tlist)
+        answer3 = input("Would you like to save to a file? y/n").lower()
+        if answer3 == "y":
+            write_file(tlist, "Tuple")
+
+
     else:
         print("Incorect input, Please try again!")
