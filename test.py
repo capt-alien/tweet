@@ -20,4 +20,6 @@ loop = 15
 
 #create resulting object
 result = sentance(hgram, total, loop)
-print(result)
+word_string = " "
+word_string = word_string.join(word for word in result)
+print(word_string)
