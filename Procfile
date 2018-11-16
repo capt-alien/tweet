@@ -1,1 +1,1 @@
-web: gunicorn -w 4 app_file:dark-heart2
+web: gunicorn -w 4 app_file:dark-heart-2
