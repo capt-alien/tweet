@@ -1,5 +1,4 @@
 # code borrows from Dylan Flinn
-
 import random
 from sys import argv
 from histogram import text_list

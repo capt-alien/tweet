@@ -24,9 +24,7 @@ class Listogram(list):
         index = self._index(word)
         if index is not None:
             # if the index is found
-            # grad the index of that word and its digit index[1] and store it in the variable value
             value = self[index][1]
-            # that same index increment the count value from tuple/ list
             self[index] = (word, value + count)
         else:
             # if not found append in it into the list of tuples with the word and the count
@@ -44,7 +42,6 @@ class Listogram(list):
             return self[index][1]
         else:
             return 0
-
 
 
     def __contains__(self, word):
