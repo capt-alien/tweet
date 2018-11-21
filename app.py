@@ -1,16 +1,10 @@
 from flask import Flask
 import random
-import weight_prob
-
-# Create loop for sentance
-def sentance(histogram, total, loop):
-    looper = int(loop)
-    sentance1= []
-    # loop
-    for i in range(0,looper):
-        weight_word = weight_prob.weighted_random(histogram, total)
-        sentance1.append(weight_word)
-    return sentance1
+import cleanup
+import tokenize
+import wordcount
+import sample
+import sentance
 
 
 # connect to the web
@@ -20,14 +14,12 @@ app = Flask(__name__)
 @app.route('/')
 def result():
     #process and import file
-    hgram = weight_prob.dict_words(weight_prob.text_list('heart_of_darkness.txt'))
-    total = weight_prob.sum_value(hgram)
-    loop = 15
-    result = sentance(hgram, total, loop)
-    word_string = " "
-    word_string = word_string.join(word for word in result)
+    hgram = wordcount.dict_words(cleanup.text_list('text/heart_of_darkness.txt'))
+    total = wordcount.sum_value(hgram)
+    loop = 30
+    result = sentance.sentance(hgram, total, loop)
     #create resulting object
-    return str(word_string)
+    return result
 
 @app.route('/tuna')
 def tuna():
