@@ -9,6 +9,7 @@ class Node(object):
         self.data = data
         self.next = None
 
+
     def __repr__(self):
         """Return a string representation of this node."""
         return 'Node({!r})'.format(self.data)
@@ -20,7 +21,7 @@ class LinkedList(object):
         """Initialize this linked list and append the given items, if any."""
         self.head = None  # First node
         self.tail = None  # Last node
-        # add properity to have a count of nodes
+        self.list_length = 0
         # Append given items
         if items is not None:
             for item in items:
@@ -55,87 +56,87 @@ class LinkedList(object):
         return self.head is None
 
     def length(self):
-        """Return the length of this linked list by traversing its nodes.
-        TODO: Running time: O(???) Why and under what conditions?"""
-        count_node = 0
-        # i_node is the itteration node start it with the head node
-        i_node = self.head
-        # TODO: Loop through all nodes and count one for each
-        while i_node is not None: # for item in self.item():
-            i_node = i_node.next  # try using making this a for loop
-            count_node += 1
-        return count_node
+        return self.list_length
 
     def append(self, item):
-        """Insert the given item at the tail of this linked list.
-        TODO: Running time: O(???) Why and under what conditions?"""
-        # TODO: Create new node to hold given item
-        n_node = Node(item)
-        # TODO: Append node after tail, if it exists
-        if self.is_empty(): #<--- this means self.tail is none
-            self.tail.next = n_node
-            self.tail = n_node
+        node = Node(item)
+        if self.tail is not None: #<--- this means self.tail is none
+            self.tail.next = node
+            self.tail = node
         else:
-            self.head
-            self.tail = n_node
+            self.head = node
+            self.tail = node
+        self.list_length += 1
 
 
     def prepend(self, item):
         """Insert the given item at the head of this linked list.
         TODO: Running time: O(???) Why and under what conditions?"""
         # TODO: Create new node to hold given item
-        n_node = Node(item)
+        node = Node(item)
         # TODO: Prepend node before head, if it exists
         if self.head:
             n_node.next = self.head
-            self.head - n_node
+            self.head = node
         else:
-            self.head = n_node
-            self.tail = n_node
+            self.head = node
+            self.tail = node
+        self.list_length += 1
 
     def find(self, quality):
-        """Return an item from this linked list satisfying the given quality.
-        TODO: Best case running time: O(???) Why and under what conditions?
-        TODO: Worst case running time: O(???) Why and under what conditions?"""
-        i_node = self.head
-        found = False
-        while i_node and found is False:
-            if  quality(i_node.data) is True:
-                found = True
-            return i_node.data
-        else:
-            i_node = i_node.next
+        node = self.head
+        while(node != None):
+            if (quality(node.data)):
+                return node.data
+            node = node.next
+        return None
+
+        # node = self.head
+        # match = None
+        # while node is not None:
+        #     if  quality(node.data) is True:
+        #         match = node.data
+        #         node = None
+        #     else:
+        #         node = node.next()
+        # return match
         # TODO: Loop through all nodes to find item where quality(item) is True
         # TODO: Check if node's data satisfies given quality function
 
     def delete(self, item):
-        """Delete the given item from this linked list, or raise ValueError.
-        TODO: Best case running time: O(???) Why and under what conditions?
-        TODO: Worst case running time: O(???) Why and under what conditions?"""
-        # TODO: Loop through all nodes to find one whose data matches given item
-        # TODO: Update previous node to skip around node with matching data
-        # TODO: Otherwise raise error to tell user that delete has failed
-        # Hint: raise ValueError('Item not found: {}'.format(item))
-        i_node = self.head
-        last = None
+        previous = None
         found = False
-        #loops through the nodes:
-        while i_node and found is False:
-            if I_node.data == item:
-                found == True
-            else:
-                last = i_node
-                i_node = i_node.next
-        if i_node is None:
+        node = self.head
+        while not found and node is not None:
+            if node.data == item:
+                # if we're not at the head, connect the previous node with the next one
+                if previous is not None:
+                    previous.next = node.next
+                # if we ARE at the head, make the next node the head
+                else:
+                    self.head = node.next
+                # if we're at the tail, point the tail to the previous node
+                if node.next is None:
+                    self.tail = previous
+                self.list_length -= 1
+                found = True
+            previous = node
+            node = node.next
+        if not found:
             raise ValueError('Item not found: {}'.format(item))
 
-        if last is None:
-            self.head = i_node.next
-        else:
-            last.next = i_node.next
 
-        if i_node.net is None:
-            self.tail = last
+    def replace(self, comparator, replacement):
+    # Walk through list until we find the target, then replace the data
+        found = False
+        node = self.head
+        while not found and node is not None:
+            if comparator(node.data) is True:
+                node.data = replacement
+                found = True
+            node = node.next
+        if not found:
+            raise ValueError('Replacement target not found.')
 
 
 

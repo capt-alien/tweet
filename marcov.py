@@ -47,3 +47,5 @@ if __name__ == '__main__':
     print(words)
     m_chain = marcov(words)
     print(m_chain)
+    key = m_chain[0]
+    sentace1 = M_sentance(m_chain, looper, )
