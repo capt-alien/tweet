@@ -69,6 +69,7 @@ class HashTable(object):
         index = self._bucket_index(key)
         finder = False
         key_value = self.buckets[index].find(lambda item: item[0] == key)
+        # find(lambda item: item[0] == key) --> ret.data[0] = key
         if key_value is not None:
             finder = True
         return finder
@@ -86,11 +87,12 @@ class HashTable(object):
     def set(self, key, value):
         index = self._bucket_index(key)
         key_value = (key, value)
+        print(key_value)
         try:
-            self.buckets[index].replace(lambda item: item[0] == key, key_value)
+        self.buckets[index].replace(lambda item: item[0] == key, key_value)
         except ValueError:
-            self.buckets[index].append(key_value)
-            self.number_of_entries += 1
+        self.buckets[index].append(key_value)
+        self.number_of_entries += 1
 
     def delete(self, key):
         index = self._bucket_index(key)

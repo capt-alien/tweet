@@ -53,13 +53,17 @@ class LinkedList(object):
 
     def is_empty(self):
         """Return a boolean indicating whether this linked list is empty."""
+        #O(1)
         return self.head is None
 
     def length(self):
+        # O(1)
+        # Normally O(n)
         return self.list_length
 
     def append(self, item):
         node = Node(item)
+        # O(n)+1
         if self.tail is not None: #<--- this means self.tail is none
             self.tail.next = node
             self.tail = node
@@ -67,7 +71,6 @@ class LinkedList(object):
             self.head = node
             self.tail = node
         self.list_length += 1
-
 
     def prepend(self, item):
         """Insert the given item at the head of this linked list.
@@ -124,7 +127,6 @@ class LinkedList(object):
             node = node.next
         if not found:
             raise ValueError('Item not found: {}'.format(item))
-
 
     def replace(self, comparator, replacement):
     # Walk through list until we find the target, then replace the data
