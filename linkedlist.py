@@ -9,7 +9,6 @@ class Node(object):
         self.data = data
         self.next = None
 
-
     def __repr__(self):
         """Return a string representation of this node."""
         return 'Node({!r})'.format(self.data)
@@ -75,9 +74,8 @@ class LinkedList(object):
     def prepend(self, item):
         """Insert the given item at the head of this linked list.
         TODO: Running time: O(???) Why and under what conditions?"""
-        # TODO: Create new node to hold given item
+        # O(n)+1 Just like Append but uses .head insted of .tail
         node = Node(item)
-        # TODO: Prepend node before head, if it exists
         if self.head:
             n_node.next = self.head
             self.head = node
@@ -87,6 +85,7 @@ class LinkedList(object):
         self.list_length += 1
 
     def find(self, quality):
+        # O(N+2) becuase we have one loop
         node = self.head
         while(node != None):
             if (quality(node.data)):
@@ -94,19 +93,9 @@ class LinkedList(object):
             node = node.next
         return None
 
-        # node = self.head
-        # match = None
-        # while node is not None:
-        #     if  quality(node.data) is True:
-        #         match = node.data
-        #         node = None
-        #     else:
-        #         node = node.next()
-        # return match
-        # TODO: Loop through all nodes to find item where quality(item) is True
-        # TODO: Check if node's data satisfies given quality function
-
     def delete(self, item):
+        # Best case: O(n)--> obejct at begining of list
+        # worst Case: O(n+2)  --> has a few checks
         previous = None
         found = False
         node = self.head
@@ -130,6 +119,7 @@ class LinkedList(object):
 
     def replace(self, comparator, replacement):
     # Walk through list until we find the target, then replace the data
+    # O(N) --> we have one loop in the function
         found = False
         node = self.head
         while not found and node is not None:

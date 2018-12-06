@@ -28,7 +28,7 @@ class HashTable(object):
     def keys(self):
         """Return a list of all keys in this hash table.
         TODO: Running time: O(???) Why and under what conditions?"""
-        # ^^?????ask question about this????
+        # ^^runtime: O(n^2) --> has a nested loop that makes it quadradic time
         # Collect all keys in each bucket
         all_keys = []
         for bucket in self.buckets:
@@ -39,6 +39,7 @@ class HashTable(object):
     def values(self):
         """Return a list of all values in this hash table.
         TODO: Running time: O(???) Why and under what conditions?"""
+        # ^^runtime: O(n^2) --> has a nested loop that makes it quadradic time
         #Declare a list to return
         values = []
         # TODO: Loop through all buckets
@@ -51,6 +52,7 @@ class HashTable(object):
     def items(self):
         """Return a list of all items (key-value pairs) in this hash table.
         TODO: Running time: O(???) Why and under what conditions?"""
+        # Runtime O(n) --> it loops through inputs
         # Collect all pairs of key-value entries in each bucket
         all_items = []
         for bucket in self.buckets:
@@ -58,13 +60,14 @@ class HashTable(object):
         return all_items
 
     def length(self):
+        # O(1) --> this data is stored in a variable so it is readly accessable
         return self.number_of_entries
         # Loop through all buckets
-
 
     def contains(self, key):
         """Return True if this hash table contains the given key, or False.
         TODO: Running time: O(???) Why and under what conditions?"""
+        # O(1)  --> Key should be already indexed
         # Find bucket where given key belongs
         index = self._bucket_index(key)
         finder = False
@@ -77,21 +80,22 @@ class HashTable(object):
     def get(self, key):
         """Return the value associated with the given key, or raise KeyError.
         TODO: Running time: O(???) Why and under what conditions?"""
+        # Runtime: O(1) --> uses contains to loacate key
         if self.contains(key):
             bucket = self.buckets[self._bucket_index(key)]
             return bucket.find(key)
         else:
             raise KeyError('Key not found: {}'.format(key))
 
-
     def set(self, key, value):
+        # Runtime: O(1)
         index = self._bucket_index(key)
         key_value = (key, value)
         print(key_value)
         try:
-        self.buckets[index].replace(lambda item: item[0] == key, key_value)
+            self.buckets[index].replace(lambda item: item[0] == key, key_value)
         except ValueError:
-        self.buckets[index].append(key_value)
+            self.buckets[index].append(key_value)
         self.number_of_entries += 1
 
     def delete(self, key):
