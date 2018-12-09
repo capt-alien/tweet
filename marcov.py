@@ -10,7 +10,7 @@ def marcov(text_list):
     #define marcov Dictionary
     m_dictionary = dict()
     #create for value in variable:
-    # pass looop for each word, the word is the key and value is a histogram
+    # pass loop for each word, the word is the key and value is a histogram
     for index in range(len(text_list) - 1):
         word = text_list[index]
         # check if key is stored already
