@@ -16,12 +16,12 @@ def text_list(file_name):
     # splilts the string into a list
     word_pasta = wo_punctuation.split()
     return word_pasta
-
     # return pasta
 
-def splt_text(string):
-    split_string = string.split()
-    return split_string
+# to spead up this process, we could get the resulting word list to write to a file. 
+
+#streatch go through a list and puncuate the first letter of the next
+# word after the start token and end with a period after the stop token
 
 if __name__ == '__main__':
     file1 = argv[1]

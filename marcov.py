@@ -21,7 +21,6 @@ def marcov(text_list):
             #if it is it should be added in our histogram
         return m_dictionary
 
-
 #loop through a sentance: Key1 is first key in chain
 def M_sentance(marcov, looper, first_key):
     looper = int(loop)
