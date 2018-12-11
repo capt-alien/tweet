@@ -11,17 +11,24 @@ import dictogram
 def marcov(text_list):
     #define marcov Dictionary
     m_dictionary = dict()
-    #create for value in variable:
-    # pass loop for each word, the word is the key and value is a histogram
-    for index in range(len(text_list) - 1):
-        word = text_list[index]
-        # check if key is stored already
-        if word in m_dictionary:
-            m_dictionary[word].add_count([text_list[index + 1]])
-        else:
-            m_dictionary[word] = dictogram.Dictogram([text_list[index + 1]])
-            #if it is it should be added in our histogram
-        return m_dictionary
+    #creaete a tuple for word secquence
+    seq_list = list()
+    for value in text_list:
+        # use enumerate function
+        key1 = tuple(word, keytext_list[+1]) ##Pull out key
+        seq_list.append(key1)
+    print(seq_list)
+
+    # # pass loop for each tuple, the word is the key and value is a histogram
+    # for index in range(len(text_list) - 1):
+    #     word = text_list[index]
+    #     # check if key is stored already
+    #     if word in m_dictionary:
+    #         m_dictionary[word].add_count([text_list[index + 1]])
+    #     else:
+    #         m_dictionary[word] = dictogram.Dictogram([text_list[index + 1]])
+    #         #if it is it should be added in our histogram
+    return m_dictionary
 
 #loop through a sentance: Key1 is first key in chain
 def M_sentance(marcov, looper, first_key):

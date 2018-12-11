@@ -18,6 +18,9 @@ def text_list(file_name):
     word_pasta = wo_punctuation.split()
     if word_pasta[(len(word_pasta)-1)] == 'START':
         word_pasta.pop()
+    if word_pasta[0] != 'START':
+        word_pasta.insert(0,'START')
+        # word_pasta.pop()   <<<<<Code here
     return word_pasta
     # return pasta
 
