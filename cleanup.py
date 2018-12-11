@@ -14,11 +14,14 @@ def text_list(file_name):
     #take out punctuation
     wo_punctuation = re.sub(r"\W", " " , w_ss_tokens)
     # splilts the string into a list
+    #delete last "START" at end of the list
     word_pasta = wo_punctuation.split()
+    if word_pasta[(len(word_pasta)-1)] == 'START':
+        word_pasta.pop()
     return word_pasta
     # return pasta
 
-# to spead up this process, we could get the resulting word list to write to a file. 
+# to spead up this process, we could get the resulting word list to write to a file.
 
 #streatch go through a list and puncuate the first letter of the next
 # word after the start token and end with a period after the stop token

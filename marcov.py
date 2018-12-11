@@ -1,3 +1,5 @@
+# portions of this code was borrowed from Lucia
+
 from sys import argv
 import cleanup
 import sample
@@ -46,5 +48,5 @@ if __name__ == '__main__':
     print(words)
     m_chain = marcov(words)
     print(m_chain)
-    key = m_chain[0]
-    sentace1 = M_sentance(m_chain, looper, )
+    # key = m_chain[0]
+    # sentace1 = M_sentance(m_chain, looper, )
