@@ -13,21 +13,23 @@ def marcov(text_list):
     m_dictionary = dict()
     #creaete a tuple for word secquence
     seq_list = list()
-    for value in text_list:
-        # use enumerate function
-        key1 = tuple(word, keytext_list[+1]) ##Pull out key
-        seq_list.append(key1)
-    print(seq_list)
+    for key, value in enumerate(text_list):
+        print(key, value)
+        if key+1 < len(text_list):
+            key1 = (value, text_list[key+1])
+            seq_list.append(key1)
+        else:
+            break
 
-    # # pass loop for each tuple, the word is the key and value is a histogram
-    # for index in range(len(text_list) - 1):
-    #     word = text_list[index]
-    #     # check if key is stored already
-    #     if word in m_dictionary:
-    #         m_dictionary[word].add_count([text_list[index + 1]])
-    #     else:
-    #         m_dictionary[word] = dictogram.Dictogram([text_list[index + 1]])
-    #         #if it is it should be added in our histogram
+# pass loop for each tuple in seq_list,
+    for index in range(len(text_list) - 1):
+        word = text_list[index]
+    #check if key is stored already
+        if word in m_dictionary:
+            m_dictionary[word].add_count([text_list[index + 1]])
+        else:
+            m_dictionary[word] = dictogram.Dictogram([text_list[index + 1]])
+            #if it is it should be added in our histogram
     return m_dictionary
 
 #loop through a sentance: Key1 is first key in chain
@@ -52,7 +54,6 @@ def M_sentance(marcov, looper, first_key):
 if __name__ == '__main__':
     file1 = argv[1]  #file to analyze
     words = cleanup.text_list(file1)
-    print(words)
     m_chain = marcov(words)
     print(m_chain)
     # key = m_chain[0]
