@@ -1,10 +1,6 @@
 from flask import Flask
 import random
 import cleanup
-import tokenize
-import wordcount
-import sample
-import sentance
 import markov
 
 
@@ -26,10 +22,11 @@ def result():
 
 
 if __name__ == "__main__":
-    #this makes it so that we only call the servier
+    #this makes it so that we only call the server
     #when run directly
-    app.run(debug =True)
+    app.run()
 
+# app.run(debug =True)
 
 
 
