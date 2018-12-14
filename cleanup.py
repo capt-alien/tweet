@@ -23,12 +23,7 @@ def text_list(file_name):
         word_pasta.insert(0,'START')
         # word_pasta.pop()   <<<<<Code here
     return word_pasta
-    # return pasta
 
-# to spead up this process, we could get the resulting word list to write to a file.
-
-#streatch go through a list and puncuate the first letter of the next
-# word after the start token and end with a period after the stop token
 
 if __name__ == '__main__':
     file1 = argv[1]

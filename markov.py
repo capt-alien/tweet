@@ -68,6 +68,5 @@ if __name__ == '__main__':
     words = cleanup.text_list(file1)
     m_chain = order_mchain(2, words)
     c_start = start_token(m_chain)
-    c_stop = stop_tokens(m_chain)
     walk_the_dog = walk(c_start, m_chain)
     print(finalize(walk_the_dog))
