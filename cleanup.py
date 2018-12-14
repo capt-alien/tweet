@@ -6,7 +6,7 @@ import random
 ##open text file and turn it into a usable words_list
 def text_list(file_name):
     #Opens file
-    raw_words = open(file_name, 'r').read()
+    raw_words = open(file_name, 'r').read().lower()
     # take all titles outer (Getting errors need help)
     # no_titles = re.sub(r"(X?|X{0,3})(CM|CD|D?C{0,3})(IX|IV|V?I{0,3})\.(\s\w+){1,7}", " ", raw_words).lower()
     # print(no_titles)
