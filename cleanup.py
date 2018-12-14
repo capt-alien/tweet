@@ -8,9 +8,10 @@ def text_list(file_name):
     #Opens file
     raw_words = open(file_name, 'r').read()
     # take all titles outer (Getting errors need help)
-    no_titles = re.sub(r"(X?|X{0,3})(CM|CD|D?C{0,3})(IX|IV|V?I{0,3})\.(\s\w+){1,7}", " ", raw_words).lower()
+    # no_titles = re.sub(r"(X?|X{0,3})(CM|CD|D?C{0,3})(IX|IV|V?I{0,3})\.(\s\w+){1,7}", " ", raw_words).lower()
+    # print(no_titles)
     #turn all periods into start/stop tokens
-    w_ss_tokens = re.sub(r"\." , " STOP START ", no_titles)
+    w_ss_tokens = re.sub(r"\." , " STOP START ", raw_words)
     #take out punctuation
     wo_punctuation = re.sub(r"\W", " " , w_ss_tokens)
     # splilts the string into a list

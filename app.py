@@ -21,11 +21,6 @@ def result():
     #create resulting object
     return result
 
-@app.route('/tuna')
-def tuna():
-    return 'Tuna Fuck YeaH!'
-    # If you want to make a variable inside the URL you need to use angle
-    # brackets <>   for example to insert username into URL  do <username>
 
 
 if __name__ == "__main__":
