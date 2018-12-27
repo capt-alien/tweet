@@ -1,6 +1,6 @@
 #!python
 
-from linked_l import LinkedList, Node
+from linkedlist import LinkedList, Node
 import unittest
 
 

@@ -77,7 +77,7 @@ class LinkedList(object):
         # O(n)+1 Just like Append but uses .head insted of .tail
         node = Node(item)
         if self.head:
-            n_node.next = self.head
+            node.next = self.head
             self.head = node
         else:
             self.head = node
