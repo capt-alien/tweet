@@ -69,7 +69,6 @@ def write_file(object, type):
 if __name__ == '__main__':
     file1 = argv[1]
     print_list = text_list(file1)
-    print(print_list)
     #promts user for method
     print("==================================")
     print("Welcome to Hist-o-grama-rama!!!!!")
