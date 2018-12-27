@@ -14,7 +14,7 @@ def load_words():
 
 
 def random_word(words_list):
-    #picks random word 
+    #picks random word
     secret_word = random.choice(words_list)
     return secret_word
 
