@@ -7,7 +7,20 @@ import sentence
 import dictogram
 import random
 
+#please note that I reverse engineered this from the nth order chain
+def m_chain_one(text_list):
+    markov_dict = {}
+    # for each word in list, key is word and value is dictogram
+    for index in range(len(text_list) - 1):
+        window = text_list[index]
+        if index in markov_dict:
+            markov_dict[window].add_count([text_list[index + 1]])
+        else:
+            markov_dict[window] = dictogram.Dictogram([text_list[index + 1]])
+    # return dictionary
+    return markov_dict
 
+#nth Order markov Chain derived from first order
 def order_mchain(order, text_list):
     markov_dict = {}
     # for each word in list, key is word and value is dictogram
@@ -33,6 +46,7 @@ def start_token(markov_model):
     token = random.choice(start_tokens)
     return token
 
+#unessary for this ittration but keeping for future improvments
 def stop_tokens(dictionary):
     # create list of words that ened sentences
     stop_tokens = []
@@ -66,7 +80,9 @@ def finalize(sentence):
 if __name__ == '__main__':
     file1 = argv[1]  #file to analyze
     words = cleanup.text_list(file1)
-    m_chain = order_mchain(2, words)
-    c_start = start_token(m_chain)
-    walk_the_dog = walk(c_start, m_chain)
-    print(finalize(walk_the_dog))
+    # m_chain = order_mchain(2, words)
+    m_chain = m_chain_one(words)
+    print(m_chain)
+    # c_start = start_token(m_chain)
+    # walk_the_dog = walk(c_start, m_chain)
+    # print(finalize(walk_the_dog))
