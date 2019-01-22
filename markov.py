@@ -59,7 +59,7 @@ def walk(start_token, dictionary):
     # walks the markov
     sentence = ['START', start_token[1]]
     #while the last entry in the list sentence is not "STOP"
-    while sentence[len(sentence)-1] != 'STOP':
+    while sentence[len(sentence)-1] != 'STOP': #or len(sentence) < 19:
         window = (sentence[len(sentence) - 2], sentence[len(sentence)-1])
         hist = dictionary[tuple(window)]
         next_word = sample.weighted_random(hist, sample.sum_value(hist))

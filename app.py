@@ -19,7 +19,7 @@ def main():
     print(home)
     # # #create resulting object
     # return home
-    return render_template('main.html', sentance = home)
+    return render_template("main.html", sentence = home)
 
 
 

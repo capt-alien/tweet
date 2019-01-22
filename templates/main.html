@@ -1,9 +1,11 @@
 <html>
     <head>
-        <title>What the Dickens!?</title>
-        
+        <title>What the Dicken's!?</title>
+
         <!-- Need this line so app can use css file -->
-        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='static/styles.css') }}"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+        <!-- <link rel="stylesheet" href="./static/css/styles.css"> -->
 
         <div id="header">
             <h1>
@@ -13,11 +15,8 @@
         </div>
     </head>
 
-    <body
-    {
-            background-image: url("/static/css/dickens.jpg");
-         }>
-
+    <body>
+        <!-- Need this line so app can use css file -->
         <div id="quote">
             <h2>{{sentence}}</h2>
 

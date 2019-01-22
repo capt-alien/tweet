@@ -1,31 +1,35 @@
 body
 {
     background-image: url("dickens.jpg");
+    background-repeat: no-repeat: ;
 }
 
 #quote
 {
     display: flex;
-    width: 50%;
-    height: 100%;
-    margin: auto;
-
+    width: 35%;
+    height: 40%;
+    margin: left;
     animation-name: fadeIn;
     animation-duration: 4s;
-
+    background-color: white;
+    text-align: center;
     font-family: cursive;
 }
 
-h2
+header.h2
 {
     margin: auto; /* Important */
-    text-align: center;
+    text-align: left;
+    /* background-color: white; */
     margin-top: 30%;
+    font-family: cursive;
 }
 
-h1
+header.h1
 {
-    text-align: center;
+    text-align: left;
+    color: black;
     margin-top: 3%;
 }
 
