@@ -16,11 +16,13 @@ def main():
     walk_the_dog = markov.walk(c_start, m_chain)
     almost = markov.finalize(walk_the_dog)
     home = str(almost)
-    print(home)
     # # #create resulting object
     # return home
     return render_template("main.html", sentence = home)
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 
 if __name__ == "__main__":
